@@ -1,0 +1,4 @@
+theme = "nord"
+
+[editor.soft-wrap]
+enable = true
