@@ -101,7 +101,7 @@
   "latex-workshop.view.pdf.color.dark.backgroundColor": "#2E3440", // "#ffffff"
   "latex-workshop.view.pdf.color.dark.pageBorderColor": "#2E3440", // "lightgrey"
   "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#2E3440",
-  "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#d1cbbf",
+  "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#D1CBBF",
   "markdown-mermaid.darkModeTheme": "neutral",
   // "latex-workshop.view.pdf.color.light.backgroundColor": "#ededf5", // "#ffffff"
   // "latex-workshop.view.pdf.color.light.pageBorderColor": "#ededf5", // "lightgrey"
