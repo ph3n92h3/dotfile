@@ -1,3 +1,4 @@
+// https://github.com/linuxmobile/hyprland-dots
 {
     "backlight": {
         // "device": "acpi_video1",
@@ -30,22 +31,51 @@
         "format-plugged": "{capacity}% ",
         "states": {
             "critical": 15,
-            // "good": 95,
+            "good": 95,
             "warning": 30
         }
     },
     "clock": {
         "format": "{:%F %a %H:%M}"
     },
+    "custom/playerctl": {
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "format": "{icon}",
+        "format-icons": {
+            "Playing": "<span foreground='#D1CBBF'>󰒮 󰏥 󰒭</span>",
+            "Paused": "<span foreground='#D1CBBF'>󰒮 󰐌 󰒭</span>"
+        },
+        "max-length": 64,
+        "on-click": "playerctl previous",
+        "on-click-middle": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "return-type": "json"
+    },
+    "custom/weather": {
+        "exec": "wttrbar",
+        "format": "{} °",
+        "interval": 3600,
+        "return-type": "json",
+        "tooltip": true
+    },
     "hyprland/window": {
-        "format": "{initialTitle} 🌸 ❄️"
+        "format": " {initialTitle} "
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "󰧞"
+        }
     },
     "modules-center": [
-        "clock"
+        "clock",
+        "custom/weather"
     ],
     "modules-left": [
         "hyprland/window",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/playerctl"
     ],
     "modules-right": [
         "tray",

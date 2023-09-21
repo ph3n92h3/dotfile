@@ -1,14 +1,21 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: 'Noto Sans CJK SC';
-    font-size: 13px;
+    font-family: FiraCode Nerd Font Propo, FontAwesome;
+    font-size: 12px;
 }
 
 window#waybar {
-    background-color: rgba(46, 52, 64, 0.5);
+    background-color: rgba(46, 52, 64, 0);
     color: #D1CBBF;
     transition-property: background-color;
+}
+
+#window,
+#workspaces {
+    background-color: rgba(76, 86, 106, 0.8);
+    border-radius: 10px;
+    margin: 0px 0px 0px 5px;
 }
 
 #workspaces button {
@@ -16,12 +23,17 @@ window#waybar {
     color: #D1CBBF;
 }
 
-#pulseaudio,
-#network,
+#clock,
+#custom-playerctl,
+#custom-weather,
 #backlight,
 #battery,
-#tray,
-#clock {
-    padding: 0 7px;
+#network,
+#pulseaudio,
+#tray {
+    background-color: rgba(76, 86, 106, 0.5);
+    border-radius: 8px;
     color: #D1CBBF;
+    margin: 0px 0px 0px 5px;
+    padding: 0 6px;
 }

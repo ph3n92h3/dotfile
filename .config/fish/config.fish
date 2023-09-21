@@ -2,17 +2,18 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias g="gotop"
+alias a="auto-cpufreq --stats"
+alias c="cpufetch"
+alias f="fastfetch"
 alias h="htop"
 alias hx="helix"
 alias j="joshuto"
-alias f="fastfetch"
 alias n="nvtop"
 alias p="paru"
 
 clear
 
-fastfetch
+cpufetch & fastfetch
 
 export all_proxy=http://127.0.0.1:7890
 

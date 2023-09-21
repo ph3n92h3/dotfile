@@ -2,6 +2,9 @@
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -13,10 +16,10 @@
   },
   "editor.cursorSurroundingLines": 15,
   "editor.fontFamily": "'FiraCode Nerd Font', 'Noto Sans CJK SC'",
-  // "editor.fontFamily": "'LXGW WenKai Mono'",
+  // "editor.fontFamily": "'Sarasa Gothic'",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
@@ -24,29 +27,43 @@
   },
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "files.autoGuessEncoding": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "git.openRepositoryInParentFolders": "never",
   "latex-utilities.countWord.format": "${words} Words",
   "latex-utilities.message.update.show": false,
+  "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.latex.bibDirs": ["/home/ph2/OneDrive_ph3n92h3/.jabref"],
+  "latex-workshop.latex.bibDirs": [
+    "/home/ph2/OneDrive_ph3n92h3/.jabref"
+  ],
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk (xelatex)",
-      "tools": ["xelatexmk"]
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "lualatexmk"
+      ]
     },
     {
       "name": "latexmk",
-      "tools": ["latexmk"]
+      "tools": [
+        "latexmk"
+      ]
     },
     {
-      "name": "latexmk (latexmkrc)",
-      "tools": ["latexmk_rconly"]
+      "name": "latexmk (pdflatex)",
+      "tools": [
+        "pdflatexmk"
+      ]
     },
     {
-      "name": "latexmk (lualatex)",
-      "tools": ["lualatexmk"]
+      "name": "latexmk (xelatex)",
+      "tools": [
+        "xelatexmk"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -60,7 +77,6 @@
         "%DOC%"
       ],
       "command": "latexmk",
-      "env": {},
       "name": "latexmk"
     },
     {
@@ -69,13 +85,12 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-lualatex",
+        "-pdflatex",
         "-outdir=%OUTDIR%",
         "%DOC%"
       ],
       "command": "latexmk",
-      "env": {},
-      "name": "lualatexmk"
+      "name": "pdflatexmk"
     },
     {
       "args": [
@@ -88,25 +103,32 @@
         "%DOC%"
       ],
       "command": "latexmk",
-      "env": {},
       "name": "xelatexmk"
     },
     {
-      "args": ["%DOC%"],
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
       "command": "latexmk",
-      "env": {},
-      "name": "latexmk_rconly"
+      "name": "lualatexmk"
     }
   ],
-  "latex-workshop.view.pdf.color.dark.backgroundColor": "#2E3440", // "#ffffff"
-  "latex-workshop.view.pdf.color.dark.pageBorderColor": "#2E3440", // "lightgrey"
-  "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#2E3440",
-  "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#D1CBBF",
-  "markdown-mermaid.darkModeTheme": "neutral",
+  // "latex-workshop.view.pdf.color.dark.backgroundColor": "#2E3440", // "#ffffff"
+  // "latex-workshop.view.pdf.color.dark.pageBorderColor": "#2E3440", // "lightgrey"
+  // "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#2E3440",
+  // "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#d1cbbf",
+  // "latex-workshop.view.pdf.zoom": "page-width",
   // "latex-workshop.view.pdf.color.light.backgroundColor": "#ededf5", // "#ffffff"
   // "latex-workshop.view.pdf.color.light.pageBorderColor": "#ededf5", // "lightgrey"
   // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#ededf5",
   // "latex-workshop.view.pdf.color.light.pageColorsForeground": "#12120a",
+  "markdown-mermaid.darkModeTheme": "neutral",
   "markdown-mermaid.lightModeTheme": "forest",
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.math.enabled": false,
@@ -118,22 +140,14 @@
     "\\rme": "{\\mathrm{e}}",
     "\\rmi": "{\\mathrm{i}}"
   },
-  "redhat.telemetry.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "update.showReleaseNotes": false,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Nord",
-  // "workbench.iconTheme": "eq-material-theme-icons",
-  "yaml.customTags": [
-    "!ENV scalar",
-    "!ENV sequence",
-    "tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
-    "tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
-    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
-  ],
-  "yaml.schemas": {
-    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  "workbench.colorTheme": "Nord Light",
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
   },
   "z-reader.fileDir": "/home/ph2/OneDrive_ph3n92h3/sth/",
-  "z-reader.onlineSite": "笔趣阁",
-  "explorer.confirmDragAndDrop": false
+  "z-reader.onlineSite": "笔趣阁"
 }
