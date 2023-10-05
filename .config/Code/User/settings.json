@@ -15,11 +15,13 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "editor.cursorSurroundingLines": 15,
+  "editor.folding": false,
   "editor.fontFamily": "'FiraCode Nerd Font', 'Noto Sans CJK SC'",
   // "editor.fontFamily": "'Sarasa Gothic'",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.minimap.maxColumn": 100,
   "editor.renderWhitespace": "all",
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
@@ -28,10 +30,14 @@
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.wls": "wolfram"
+  },
   "files.autoGuessEncoding": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.openRepositoryInParentFolders": "never",
+  "haskell.manageHLS": "GHCup",
   "latex-utilities.countWord.format": "${words} Words",
   "latex-utilities.message.update.show": false,
   "latex-workshop.latex.autoBuild.run": "never",
@@ -144,7 +150,7 @@
   "telemetry.telemetryLevel": "off",
   "update.showReleaseNotes": false,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Nord Light",
+  "workbench.colorTheme": "Nord",
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook"
   },
